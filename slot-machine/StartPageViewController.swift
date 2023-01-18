@@ -1,8 +1,14 @@
 //
+//  MAPD724 W2023
+//  Group 9
+//  Assignment 1
+//  File name: slot-machine
+//  Author: Po Lam Wong, Lizolet (301258847)
+//          Chi Hung Sum, Samuel (300858503)
+//          Chun Fun Suen, Alan (301277969)
+
 //  StartPafgeViewController.swift
-//  slot-machine
-//
-//  Created by Po Lam Wong on 17/1/2023.
+//  Date: Jan 18, 2023
 //
 
 import UIKit
