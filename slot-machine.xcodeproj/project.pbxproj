@@ -15,8 +15,7 @@
 		06A5505629775D5300EF5F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A5505429775D5300EF5F57 /* Main.storyboard */; };
 		06A5505829775D5400EF5F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A5505729775D5400EF5F57 /* Assets.xcassets */; };
 		06A5505B29775D5400EF5F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A5505929775D5400EF5F57 /* LaunchScreen.storyboard */; };
-		06A55066297760D000EF5F57 /* slot_appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A55065297760CF00EF5F57 /* slot_appicon.png */; };
-		06A550682977671800EF5F57 /* slotmc_backgound.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A550672977671800EF5F57 /* slotmc_backgound.png */; };
+		E338658F29778407006BFF33 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338658E29778407006BFF33 /* StartPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +28,7 @@
 		06A5505529775D5300EF5F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06A5505729775D5400EF5F57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06A5505A29775D5400EF5F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		06A55065297760CF00EF5F57 /* slot_appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_appicon.png; sourceTree = "<group>"; };
-		06A550672977671800EF5F57 /* slotmc_backgound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slotmc_backgound.png; sourceTree = "<group>"; };
+		E338658E29778407006BFF33 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +66,7 @@
 				06A5504C29775D5300EF5F57 /* GameScene.sks */,
 				06A5504E29775D5300EF5F57 /* Actions.sks */,
 				06A5505029775D5300EF5F57 /* GameScene.swift */,
+				E338658E29778407006BFF33 /* StartPageViewController.swift */,
 				06A5505229775D5300EF5F57 /* GameViewController.swift */,
 				06A5505429775D5300EF5F57 /* Main.storyboard */,
 				06A5505729775D5400EF5F57 /* Assets.xcassets */,
@@ -79,18 +78,8 @@
 		06A5506129775FD900EF5F57 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				06A5506229775FE600EF5F57 /* images */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		06A5506229775FE600EF5F57 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				06A550672977671800EF5F57 /* slotmc_backgound.png */,
-				06A55065297760CF00EF5F57 /* slot_appicon.png */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +140,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A55066297760D000EF5F57 /* slot_appicon.png in Resources */,
-				06A550682977671800EF5F57 /* slotmc_backgound.png in Resources */,
 				06A5505629775D5300EF5F57 /* Main.storyboard in Resources */,
 				06A5504D29775D5300EF5F57 /* GameScene.sks in Resources */,
 				06A5505829775D5400EF5F57 /* Assets.xcassets in Resources */,
@@ -169,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06A5505129775D5300EF5F57 /* GameScene.swift in Sources */,
+				E338658F29778407006BFF33 /* StartPageViewController.swift in Sources */,
 				06A5505329775D5300EF5F57 /* GameViewController.swift in Sources */,
 				06A5504B29775D5300EF5F57 /* AppDelegate.swift in Sources */,
 			);
