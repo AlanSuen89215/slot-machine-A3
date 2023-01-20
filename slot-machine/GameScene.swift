@@ -9,9 +9,25 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-      
+    var bgImage : Background?
+    var reel1 : Reel?
+    var reel2 : Reel?
+    var reel3 : Reel?
+    
     override func sceneDidLoad() {
-
+        name = "GAME"
+        
+        bgImage = Background()
+        addChild(bgImage!)
+        
+        reel1  = Reel(xPosition: -180)
+        addChild(reel1!)
+        
+        reel2  = Reel(xPosition: 0)
+        addChild(reel2!)
+        
+        reel3  = Reel(xPosition: 180)
+        addChild(reel3!)
     }
     
     
