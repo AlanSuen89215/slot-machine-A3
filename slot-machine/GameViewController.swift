@@ -83,7 +83,7 @@ class GameViewController: UIViewController {
         let currentBet = Int(betLabel.text!) ?? 1000
         let newBet = currentBet + 50
         betLabel!.text = String(newBet)
-//        betLabel!.text = formatter.string(from: newBet)
+//        betLabel!.text = formater.string(from: newBet as NSNumber)
     }
     
     //Minus function - minus 50 to current bet per clicking
@@ -96,7 +96,7 @@ class GameViewController: UIViewController {
     //Reset Function
     @IBAction func ResetFunction(_ sender: Any) {
         moneyAmountLabel.text = "10,000"
-        betLabel.text = "1000"
+        betLabel.text = "1,000"
         jackpotLabel.text = "10,000,000"
     }
     
