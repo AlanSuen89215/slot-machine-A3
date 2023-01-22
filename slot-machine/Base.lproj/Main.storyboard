@@ -71,21 +71,14 @@
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Slot_Machine" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="DV0-M4-B0K">
-                                <rect key="frame" x="-6" y="-6" width="404" height="864"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fd63f12e6b3b45064ee732092f8de6ea" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-6l-rm4">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slot-frame" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-6l-rm4">
                                 <rect key="frame" x="0.0" y="223" width="393" height="372"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="lfx-mz-jEV">
-                                <rect key="frame" x="264" y="418" width="96" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-HP-sl6">
                                 <rect key="frame" x="16" y="100" width="94" height="46"/>
@@ -143,14 +136,6 @@
                                 <rect key="frame" x="23" y="181" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.86274516580000005" green="0.70588237050000002" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9" translatesAutoresizingMaskIntoConstraints="NO" id="sb3-3a-kHd">
-                                <rect key="frame" x="33" y="418" width="96" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="8" translatesAutoresizingMaskIntoConstraints="NO" id="1gm-mE-Ubd">
-                                <rect key="frame" x="148" y="418" width="96" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3M-T8-Ded">
                                 <rect key="frame" x="174" y="579" width="41" height="27"/>
@@ -236,19 +221,16 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="ClQ-sd-etU"/>
                     <connections>
                         <outlet property="BtnMinus" destination="df0-Y7-Gek" id="lqT-Rx-oQX"/>
                         <outlet property="BtnPlus" destination="Mq3-tS-oNe" id="hth-t7-n6E"/>
                         <outlet property="betLabel" destination="eEY-Xk-tnW" id="tzm-DH-RER"/>
-                        <outlet property="firstImage" destination="sb3-3a-kHd" id="C9C-05-JID"/>
                         <outlet property="jackpotLabel" destination="CYx-3K-hbR" id="OFe-fa-Kko"/>
                         <outlet property="moneyAmountLabel" destination="kNv-Wg-czN" id="J77-Xo-POf"/>
                         <outlet property="moneyLabel" destination="ajT-bV-Zyc" id="pKC-b3-mWi"/>
-                        <outlet property="secondImage" destination="1gm-mE-Ubd" id="Dib-KW-mq1"/>
-                        <outlet property="thirdImage" destination="lfx-mz-jEV" id="gcX-S9-hH0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -257,15 +239,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="5" width="304" height="304"/>
-        <image name="8" width="304" height="304"/>
-        <image name="9" width="304" height="304"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="fd63f12e6b3b45064ee732092f8de6ea" width="545" height="390"/>
         <image name="istockphoto-926231068-612x612" width="612" height="510"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="screen" width="430" height="932"/>
+        <image name="slot-frame" width="545" height="390"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
