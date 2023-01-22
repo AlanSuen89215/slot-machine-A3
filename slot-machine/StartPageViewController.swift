@@ -2,7 +2,7 @@
 //  MAPD724 W2023
 //  Group 9
 //  Assignment 1
-//  File name: slot-machine
+//  App description: slot-machine
 //  Author: Po Lam Wong, Lizolet (301258847)
 //          Chi Hung Sum, Samuel (300858503)
 //          Chun Fun Suen, Alan (301277969)
@@ -33,6 +33,7 @@ class StartPageViewController: UIViewController {
                 // Apply the gradient to the backgroundGradientView.
                 backgroundView.layer.addSublayer(gradientLayer)
         
+        //style of button
         BtnStart.layer.cornerRadius = 10
         BtnStart.layer.borderWidth = 2
         BtnStart.layer.borderColor = #colorLiteral(red: 0.8932096362, green: 0.6982428432, blue: 0.3265957236, alpha: 1).cgColor

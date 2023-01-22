@@ -2,7 +2,7 @@
 //  MAPD724 W2023
 //  Group 9
 //  Assignment 1
-//  File name: slot-machine
+//  App description: slot machine
 //  Author: Po Lam Wong, Lizolet (301258847)
 //          Chi Hung Sum, Samuel (300858503)
 //          Chun Fun Suen, Alan (301277969)
@@ -96,7 +96,7 @@ class GameViewController: UIViewController {
     //Reset Function
     @IBAction func ResetFunction(_ sender: Any) {
         moneyAmountLabel.text = "10,000"
-        betLabel.text = "1,000"
+        betLabel.text = "1000"
         jackpotLabel.text = "10,000,000"
     }
     
