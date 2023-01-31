@@ -195,6 +195,9 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
                                     <color key="baseBackgroundColor" red="0.90196073060000004" green="0.2941176593" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSpinBtnTouchUpInside:" destination="BV1-FR-VrT" eventType="touchUpInside" id="dd6-go-AkI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JACKPOT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STW-dA-fXn">
                                 <rect key="frame" x="46" y="305" width="303" height="27"/>
@@ -227,6 +230,7 @@
                     <connections>
                         <outlet property="BtnMinus" destination="df0-Y7-Gek" id="lqT-Rx-oQX"/>
                         <outlet property="BtnPlus" destination="Mq3-tS-oNe" id="hth-t7-n6E"/>
+                        <outlet property="BtnSpin" destination="8GY-J6-Stm" id="kjW-DE-rfk"/>
                         <outlet property="betLabel" destination="eEY-Xk-tnW" id="tzm-DH-RER"/>
                         <outlet property="jackpotLabel" destination="CYx-3K-hbR" id="OFe-fa-Kko"/>
                         <outlet property="moneyAmountLabel" destination="kNv-Wg-czN" id="J77-Xo-POf"/>
