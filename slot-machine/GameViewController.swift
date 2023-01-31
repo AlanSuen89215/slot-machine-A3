@@ -1,14 +1,15 @@
 //
 //  MAPD724 W2023
 //  Group 9
-//  Assignment 1
+//  Assignment 2
 //  App description: slot machine
 //  Author: Po Lam Wong, Lizolet (301258847)
 //          Chi Hung Sum, Samuel (300858503)
 //          Chun Fun Suen, Alan (301277969)
 
 //  StartPafgeViewController.swift
-//  Date: Jan 18, 2023
+//  Date: Jan 31, 2023
+//  Version: 2.0
 //
 
 import UIKit
@@ -21,6 +22,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var betLabel: UILabel!
     @IBOutlet weak var moneyAmountLabel: UILabel!
     @IBOutlet weak var jackpotLabel: UILabel!
+    @IBOutlet weak var jackpotWinMsgLabel: UILabel!
     
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var secondImage: UIImageView!
@@ -132,8 +134,10 @@ class GameViewController: UIViewController {
     // - add the user's bet to Jackpot
     // - check if the user win the jackpot
     // - add the won jackpot (if any) to the user money and deduct it from jackpot
+    // - display a message when user win the jackpot
     @IBAction func onSpinBtnTouchUpInside(_ sender: UIButton) {
         resetNumOfSymbolsInReels()
+        jackpotWinMsgLabel.isHidden = true
         var symbol = randomGenerateSymbol()
         numOfSymbolsInReels[symbol]! += 1
         sceneNode?.reel1?.texture = SKTexture(imageNamed: symbol)
@@ -149,6 +153,7 @@ class GameViewController: UIViewController {
         if (wonJackpotAmount > 0) {
             deductJackpot(amount: wonJackpotAmount)
             addMoney(amount: wonJackpotAmount)
+            jackpotWinMsgLabel.isHidden = false
         }
     }
     

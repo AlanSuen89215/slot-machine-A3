@@ -1,7 +1,7 @@
 //
 //  MAPD724 W2023
 //  Group 9
-//  Assignment 1
+//  Assignment 2
 //  App description: slot-machine
 //  Author: Po Lam Wong, Lizolet (301258847)
 //          Chi Hung Sum, Samuel (300858503)
@@ -9,6 +9,7 @@
 
 //  StartPafgeViewController.swift
 //  Date: Jan 18, 2023
+//  Version: 2.0
 //
 
 import UIKit
