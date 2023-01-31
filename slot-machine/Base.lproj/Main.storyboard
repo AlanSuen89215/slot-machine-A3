@@ -195,6 +195,9 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
                                     <color key="baseBackgroundColor" red="0.90196073060000004" green="0.2941176593" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSpinBtnTouchUpInside:" destination="BV1-FR-VrT" eventType="touchUpInside" id="dd6-go-AkI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JACKPOT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STW-dA-fXn">
                                 <rect key="frame" x="46" y="305" width="303" height="27"/>
@@ -219,6 +222,13 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Win" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jit-5K-wcR">
+                                <rect key="frame" x="171" y="671" width="48" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,8 +237,10 @@
                     <connections>
                         <outlet property="BtnMinus" destination="df0-Y7-Gek" id="lqT-Rx-oQX"/>
                         <outlet property="BtnPlus" destination="Mq3-tS-oNe" id="hth-t7-n6E"/>
+                        <outlet property="BtnSpin" destination="8GY-J6-Stm" id="kjW-DE-rfk"/>
                         <outlet property="betLabel" destination="eEY-Xk-tnW" id="tzm-DH-RER"/>
                         <outlet property="jackpotLabel" destination="CYx-3K-hbR" id="OFe-fa-Kko"/>
+                        <outlet property="jackpotWinMsgLabel" destination="Jit-5K-wcR" id="eFF-1r-nws"/>
                         <outlet property="moneyAmountLabel" destination="kNv-Wg-czN" id="J77-Xo-POf"/>
                         <outlet property="moneyLabel" destination="ajT-bV-Zyc" id="pKC-b3-mWi"/>
                     </connections>
