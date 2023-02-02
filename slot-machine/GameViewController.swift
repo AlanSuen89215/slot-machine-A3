@@ -108,6 +108,9 @@ class GameViewController: UIViewController {
     
     //Reset Function
     @IBAction func ResetFunction(_ sender: Any) {
+        money = GameViewController.initialMoney
+        bet = GameViewController.initialBet
+        jackpot = GameViewController.initialJackpot
         moneyAmountLabel.text = toThousandSeparateString(num: GameViewController.initialMoney)
         betLabel.text = toThousandSeparateString(num: GameViewController.initialBet)
         jackpotLabel.text = toThousandSeparateString(num: GameViewController.initialJackpot)
