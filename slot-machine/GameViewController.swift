@@ -96,26 +96,14 @@ class GameViewController: UIViewController {
     @IBAction func AddBet(_ sender: UIButton) {
         bet += 50
         betLabel!.text = toThousandSeparateString(num: bet)
-        
-        // check if the user has enough money for the bet
-        // if the user doesn't has enough money, grey out the spin button to prevent them from playing the game
-        if (money < bet) {
-            BtnSpin.isEnabled = false
-            BtnSpin.backgroundColor = UIColor.gray
-        }
+        changeStateOfSpinButton()
     }
     
     //Minus function - minus 50 to current bet per clicking
     @IBAction func MinusBet(_ sender: Any) {
         bet -= 50
         betLabel!.text = toThousandSeparateString(num: bet)
-        
-        // check if the user has enough money for the bet
-        // if the user has enough money, enable the spin button to let them playing the game
-        if (money >= bet) {
-            BtnSpin.isEnabled = true
-            BtnSpin.backgroundColor = UIColor.red
-        }
+        changeStateOfSpinButton()
     }
     
     //Reset Function
@@ -123,6 +111,8 @@ class GameViewController: UIViewController {
         moneyAmountLabel.text = toThousandSeparateString(num: GameViewController.initialMoney)
         betLabel.text = toThousandSeparateString(num: GameViewController.initialBet)
         jackpotLabel.text = toThousandSeparateString(num: GameViewController.initialJackpot)
+        BtnSpin.isEnabled = true
+        BtnSpin.backgroundColor = UIColor.red
         sceneNode?.reel1?.texture = SKTexture(imageNamed: GameViewController.initialSymbol)
         sceneNode?.reel2?.texture = SKTexture(imageNamed: GameViewController.initialSymbol)
         sceneNode?.reel3?.texture = SKTexture(imageNamed: GameViewController.initialSymbol)
@@ -154,6 +144,22 @@ class GameViewController: UIViewController {
             deductJackpot(amount: wonJackpotAmount)
             addMoney(amount: wonJackpotAmount)
             jackpotWinMsgLabel.isHidden = false
+        }
+        changeStateOfSpinButton()
+    }
+    
+    // enable or disable the spin button by checking if the user money is enough for bet
+    private func changeStateOfSpinButton() {
+        // check if the user has enough money for the bet
+        // if the user doesn't has enough money, grey out the spin button to prevent them from playing the game
+        if (money < bet) {
+            BtnSpin.isEnabled = false
+            BtnSpin.backgroundColor = UIColor.gray
+        }
+        else {
+            // if the user has enough money, enable the spin button to let them playing the game
+            BtnSpin.isEnabled = true
+            BtnSpin.backgroundColor = UIColor.red
         }
     }
     
