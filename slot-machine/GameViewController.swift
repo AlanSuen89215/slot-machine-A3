@@ -42,8 +42,18 @@ class GameViewController: UIViewController {
     private var jackpot: Int = initialJackpot
     private var numOfSymbolsInReels: [String : Int] = [:]
     
+    //DEBUG
+    private var course: Course = Course(courseDescription: "",courseDuration: "",courseName: "")
+    private var courseRepo: CourseRepository? = nil
+    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //DEBUG
+        courseRepo = CourseRepository(delegate: self)
+        courseRepo!.query()
+        //
         
         //color
         let yellow = UIColor(red: 255/255, green: 212/255, blue: 96/255, alpha: 1.0)
@@ -314,5 +324,13 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+extension GameViewController: CourseRepositoryDelegate {
+    func onReceivedCourse(courses: [Course]) {
+        let course = courses[0]
+        var course2 = Course(courseDescription: "abc", courseDuration: "cde", courseName: "fgh")
+        courseRepo?.update(course: course2)
     }
 }

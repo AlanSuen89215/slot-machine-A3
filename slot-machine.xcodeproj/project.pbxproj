@@ -18,6 +18,10 @@
 		06A5506D297B46B600EF5F57 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5506C297B46B600EF5F57 /* Background.swift */; };
 		06A55070297B471400EF5F57 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5506F297B471400EF5F57 /* GameObject.swift */; };
 		06A55074297B4C4600EF5F57 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A55073297B4C4600EF5F57 /* Reel.swift */; };
+		708383B30B7E501759E6392E /* Pods_slot_machine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B995BFCE83791459F67CC9 /* Pods_slot_machine.framework */; };
+		913715DA299D1AA40094A4DC /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913715D9299D1AA40094A4DC /* Course.swift */; };
+		91D7874C299D15160058B5AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D7874B299D15160058B5AE /* GoogleService-Info.plist */; };
+		91F6D60D299DCC30008A5E9F /* CourseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F6D60C299DCC30008A5E9F /* CourseRepository.swift */; };
 		E338658F29778407006BFF33 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338658E29778407006BFF33 /* StartPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,12 @@
 		06A5506C297B46B600EF5F57 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		06A5506F297B471400EF5F57 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		06A55073297B4C4600EF5F57 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
+		5596957A3BE330A36CB2F7F1 /* Pods-slot-machine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slot-machine.debug.xcconfig"; path = "Target Support Files/Pods-slot-machine/Pods-slot-machine.debug.xcconfig"; sourceTree = "<group>"; };
+		82B995BFCE83791459F67CC9 /* Pods_slot_machine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_slot_machine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		913715D9299D1AA40094A4DC /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		91D7874B299D15160058B5AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		91F6D60C299DCC30008A5E9F /* CourseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRepository.swift; sourceTree = "<group>"; };
+		B5D4EEBD9DE265516EA803A6 /* Pods-slot-machine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slot-machine.release.xcconfig"; path = "Target Support Files/Pods-slot-machine/Pods-slot-machine.release.xcconfig"; sourceTree = "<group>"; };
 		E338658E29778407006BFF33 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				708383B30B7E501759E6392E /* Pods_slot_machine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +64,8 @@
 			children = (
 				06A5504929775D5300EF5F57 /* slot-machine */,
 				06A5504829775D5300EF5F57 /* Products */,
+				5457C4F1A2123A24D517B2B6 /* Pods */,
+				93EFAF57D45911313418240B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,8 +89,11 @@
 				E338658E29778407006BFF33 /* StartPageViewController.swift */,
 				06A5505229775D5300EF5F57 /* GameViewController.swift */,
 				06A5505429775D5300EF5F57 /* Main.storyboard */,
+				91D7874B299D15160058B5AE /* GoogleService-Info.plist */,
 				06A5505729775D5400EF5F57 /* Assets.xcassets */,
 				06A5505929775D5400EF5F57 /* LaunchScreen.storyboard */,
+				913715D9299D1AA40094A4DC /* Course.swift */,
+				91F6D60C299DCC30008A5E9F /* CourseRepository.swift */,
 			);
 			path = "slot-machine";
 			sourceTree = "<group>";
@@ -99,6 +115,23 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		5457C4F1A2123A24D517B2B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5596957A3BE330A36CB2F7F1 /* Pods-slot-machine.debug.xcconfig */,
+				B5D4EEBD9DE265516EA803A6 /* Pods-slot-machine.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93EFAF57D45911313418240B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82B995BFCE83791459F67CC9 /* Pods_slot_machine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06A5505E29775D5400EF5F57 /* Build configuration list for PBXNativeTarget "slot-machine" */;
 			buildPhases = (
+				FB5795AA3A41429BD1F89DBF /* [CP] Check Pods Manifest.lock */,
 				06A5504329775D5300EF5F57 /* Sources */,
 				06A5504429775D5300EF5F57 /* Frameworks */,
 				06A5504529775D5300EF5F57 /* Resources */,
+				00C68613639B42FBFDC42E71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,22 +197,67 @@
 				06A5505829775D5400EF5F57 /* Assets.xcassets in Resources */,
 				06A5505B29775D5400EF5F57 /* LaunchScreen.storyboard in Resources */,
 				06A5504F29775D5300EF5F57 /* Actions.sks in Resources */,
+				91D7874C299D15160058B5AE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00C68613639B42FBFDC42E71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-slot-machine/Pods-slot-machine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-slot-machine/Pods-slot-machine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-slot-machine/Pods-slot-machine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB5795AA3A41429BD1F89DBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-slot-machine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06A5504329775D5300EF5F57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913715DA299D1AA40094A4DC /* Course.swift in Sources */,
 				06A5505129775D5300EF5F57 /* GameScene.swift in Sources */,
 				06A55074297B4C4600EF5F57 /* Reel.swift in Sources */,
 				E338658F29778407006BFF33 /* StartPageViewController.swift in Sources */,
 				06A55070297B471400EF5F57 /* GameObject.swift in Sources */,
 				06A5505329775D5300EF5F57 /* GameViewController.swift in Sources */,
 				06A5504B29775D5300EF5F57 /* AppDelegate.swift in Sources */,
+				91F6D60D299DCC30008A5E9F /* CourseRepository.swift in Sources */,
 				06A5506D297B46B600EF5F57 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +400,7 @@
 		};
 		06A5505F29775D5400EF5F57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5596957A3BE330A36CB2F7F1 /* Pods-slot-machine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -351,6 +432,7 @@
 		};
 		06A5506029775D5400EF5F57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5D4EEBD9DE265516EA803A6 /* Pods-slot-machine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
