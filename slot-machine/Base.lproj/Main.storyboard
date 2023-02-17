@@ -342,18 +342,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sZi-bk-CBt">
+                                <rect key="frame" x="16" y="450" width="358" height="306"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eIm-fs-MXj" id="GO2-qs-gwh"/>
+                                    <outlet property="delegate" destination="eIm-fs-MXj" id="2rY-K2-hXW"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k23-26-VC3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="k23-26-VC3" firstAttribute="trailing" secondItem="sZi-bk-CBt" secondAttribute="trailing" constant="16" id="0BW-68-fXz"/>
                             <constraint firstItem="aBo-aM-qrD" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="6GG-Vf-Yad"/>
                             <constraint firstItem="G3K-5H-ukk" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="Ka4-Bf-cHp"/>
                             <constraint firstItem="G3K-5H-ukk" firstAttribute="top" secondItem="r0Q-gl-Beb" secondAttribute="bottom" constant="8" symbolic="YES" id="Vw5-ui-Snm"/>
+                            <constraint firstItem="k23-26-VC3" firstAttribute="bottom" secondItem="sZi-bk-CBt" secondAttribute="bottom" constant="34" id="Yl1-Ll-k2H"/>
                             <constraint firstItem="r0Q-gl-Beb" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="Z6i-ct-fMO"/>
                             <constraint firstItem="aBo-aM-qrD" firstAttribute="top" secondItem="k23-26-VC3" secondAttribute="top" id="Zmh-pH-P10"/>
                             <constraint firstItem="p6L-lE-xea" firstAttribute="top" secondItem="aBo-aM-qrD" secondAttribute="bottom" constant="8" symbolic="YES" id="aen-v1-wKh"/>
                             <constraint firstItem="r0Q-gl-Beb" firstAttribute="top" secondItem="p6L-lE-xea" secondAttribute="bottom" constant="8" symbolic="YES" id="c55-tp-xfR"/>
                             <constraint firstItem="p6L-lE-xea" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="nOh-N3-xKN"/>
+                            <constraint firstItem="sZi-bk-CBt" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="yjg-TN-loo"/>
+                            <constraint firstItem="sZi-bk-CBt" firstAttribute="top" secondItem="G3K-5H-ukk" secondAttribute="bottom" constant="8" symbolic="YES" id="zdc-c9-u34"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PXs-le-X2f"/>
