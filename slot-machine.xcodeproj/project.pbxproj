@@ -19,9 +19,11 @@
 		06A55070297B471400EF5F57 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5506F297B471400EF5F57 /* GameObject.swift */; };
 		06A55074297B4C4600EF5F57 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A55073297B4C4600EF5F57 /* Reel.swift */; };
 		708383B30B7E501759E6392E /* Pods_slot_machine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B995BFCE83791459F67CC9 /* Pods_slot_machine.framework */; };
-		913715DA299D1AA40094A4DC /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913715D9299D1AA40094A4DC /* Course.swift */; };
+		910A67A8299EF28000B69E7C /* Jackpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A67A7299EF28000B69E7C /* Jackpot.swift */; };
+		910A67AA299EF3B100B69E7C /* GlobalJackpotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A67A9299EF3B100B69E7C /* GlobalJackpotViewModel.swift */; };
+		910A67AC299F014A00B69E7C /* HighestPayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A67AB299F014A00B69E7C /* HighestPayout.swift */; };
+		910A67AE299F01D200B69E7C /* HighestPayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A67AD299F01D200B69E7C /* HighestPayoutViewModel.swift */; };
 		91D7874C299D15160058B5AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D7874B299D15160058B5AE /* GoogleService-Info.plist */; };
-		91F6D60D299DCC30008A5E9F /* CourseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F6D60C299DCC30008A5E9F /* CourseRepository.swift */; };
 		E338658F29778407006BFF33 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338658E29778407006BFF33 /* StartPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +42,11 @@
 		06A55073297B4C4600EF5F57 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
 		5596957A3BE330A36CB2F7F1 /* Pods-slot-machine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slot-machine.debug.xcconfig"; path = "Target Support Files/Pods-slot-machine/Pods-slot-machine.debug.xcconfig"; sourceTree = "<group>"; };
 		82B995BFCE83791459F67CC9 /* Pods_slot_machine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_slot_machine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		913715D9299D1AA40094A4DC /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		910A67A7299EF28000B69E7C /* Jackpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jackpot.swift; sourceTree = "<group>"; };
+		910A67A9299EF3B100B69E7C /* GlobalJackpotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalJackpotViewModel.swift; sourceTree = "<group>"; };
+		910A67AB299F014A00B69E7C /* HighestPayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighestPayout.swift; sourceTree = "<group>"; };
+		910A67AD299F01D200B69E7C /* HighestPayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighestPayoutViewModel.swift; sourceTree = "<group>"; };
 		91D7874B299D15160058B5AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		91F6D60C299DCC30008A5E9F /* CourseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRepository.swift; sourceTree = "<group>"; };
 		B5D4EEBD9DE265516EA803A6 /* Pods-slot-machine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slot-machine.release.xcconfig"; path = "Target Support Files/Pods-slot-machine/Pods-slot-machine.release.xcconfig"; sourceTree = "<group>"; };
 		E338658E29778407006BFF33 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,8 +96,10 @@
 				91D7874B299D15160058B5AE /* GoogleService-Info.plist */,
 				06A5505729775D5400EF5F57 /* Assets.xcassets */,
 				06A5505929775D5400EF5F57 /* LaunchScreen.storyboard */,
-				913715D9299D1AA40094A4DC /* Course.swift */,
-				91F6D60C299DCC30008A5E9F /* CourseRepository.swift */,
+				910A67A7299EF28000B69E7C /* Jackpot.swift */,
+				910A67A9299EF3B100B69E7C /* GlobalJackpotViewModel.swift */,
+				910A67AB299F014A00B69E7C /* HighestPayout.swift */,
+				910A67AD299F01D200B69E7C /* HighestPayoutViewModel.swift */,
 			);
 			path = "slot-machine";
 			sourceTree = "<group>";
@@ -250,14 +256,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913715DA299D1AA40094A4DC /* Course.swift in Sources */,
+				910A67AA299EF3B100B69E7C /* GlobalJackpotViewModel.swift in Sources */,
 				06A5505129775D5300EF5F57 /* GameScene.swift in Sources */,
+				910A67A8299EF28000B69E7C /* Jackpot.swift in Sources */,
+				910A67AC299F014A00B69E7C /* HighestPayout.swift in Sources */,
 				06A55074297B4C4600EF5F57 /* Reel.swift in Sources */,
+				910A67AE299F01D200B69E7C /* HighestPayoutViewModel.swift in Sources */,
 				E338658F29778407006BFF33 /* StartPageViewController.swift in Sources */,
 				06A55070297B471400EF5F57 /* GameObject.swift in Sources */,
 				06A5505329775D5300EF5F57 /* GameViewController.swift in Sources */,
 				06A5504B29775D5300EF5F57 /* AppDelegate.swift in Sources */,
-				91F6D60D299DCC30008A5E9F /* CourseRepository.swift in Sources */,
 				06A5506D297B46B600EF5F57 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

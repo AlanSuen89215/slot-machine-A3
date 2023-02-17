@@ -35,25 +35,16 @@ class GameViewController: UIViewController {
     private var sceneNode: GameScene?
     private static let initialMoney = 10000
     private static let initialBet = 1000
-    private static let initialJackpot = 10000000
     private static let initialSymbol = "1"
     private var money: Int = initialMoney
     private var bet: Int = initialBet
-    private var jackpot: Int = initialJackpot
+    private var jackpot: Int = 0
     private var numOfSymbolsInReels: [String : Int] = [:]
     
-    //DEBUG
-    private var course: Course = Course(courseDescription: "",courseDuration: "",courseName: "")
-    private var courseRepo: CourseRepository? = nil
-    //
+    private var globalJackpotViewModel: GlobalJackpotViewModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //DEBUG
-        courseRepo = CourseRepository(delegate: self)
-        courseRepo!.query()
-        //
         
         //color
         let yellow = UIColor(red: 255/255, green: 212/255, blue: 96/255, alpha: 1.0)
@@ -71,7 +62,7 @@ class GameViewController: UIViewController {
         betLabel.layer.borderColor = yellow.cgColor
         betLabel.text = toThousandSeparateString(num: GameViewController.initialBet)
         
-        jackpotLabel.text = toThousandSeparateString(num: GameViewController.initialJackpot)
+        jackpotLabel.text = toThousandSeparateString(num: jackpot)
         
         //style of button
         BtnMinus.layer.masksToBounds = true
@@ -100,6 +91,10 @@ class GameViewController: UIViewController {
                 }
             }
         }
+        
+        // Get the global jackpot amount from the firestore
+        globalJackpotViewModel = GlobalJackpotViewModel(delegate: self)
+        globalJackpotViewModel!.startListeningToGlobalJackpot()
     }
     
     //Add function - add 50 to current bet per clicking
@@ -120,10 +115,9 @@ class GameViewController: UIViewController {
     @IBAction func ResetFunction(_ sender: Any) {
         money = GameViewController.initialMoney
         bet = GameViewController.initialBet
-        jackpot = GameViewController.initialJackpot
         moneyAmountLabel.text = toThousandSeparateString(num: GameViewController.initialMoney)
         betLabel.text = toThousandSeparateString(num: GameViewController.initialBet)
-        jackpotLabel.text = toThousandSeparateString(num: GameViewController.initialJackpot)
+        jackpotLabel.text = toThousandSeparateString(num: jackpot)
         BtnSpin.isEnabled = true
         BtnSpin.backgroundColor = UIColor.red
         sceneNode?.reel1?.texture = SKTexture(imageNamed: GameViewController.initialSymbol)
@@ -327,10 +321,11 @@ class GameViewController: UIViewController {
     }
 }
 
-extension GameViewController: CourseRepositoryDelegate {
-    func onReceivedCourse(courses: [Course]) {
-        let course = courses[0]
-        var course2 = Course(courseDescription: "abc", courseDuration: "cde", courseName: "fgh")
-        courseRepo?.update(course: course2)
+extension GameViewController: GlobalJackpotViewModelDelegate {
+    // deliver the update of the global jackpot
+    func onGlobalJackpotUpdate(jackpot: Jackpot) {
+        // update the jackpot of the slot machine
+        self.jackpot = jackpot.amount
+        jackpotLabel.text = toThousandSeparateString(num: self.jackpot)
     }
 }
