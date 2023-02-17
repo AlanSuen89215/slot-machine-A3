@@ -19,6 +19,8 @@ import FirebaseFirestore
 protocol HighestPayoutViewModelDelegate: AnyObject {
     // deliver the update of the highest payout of the user
     func onHighestPayoutUpdate(highestPayout: HighestPayout)
+    // deliver the document id of the created highest payout record
+    func onHighestPayoutCreated(id: String)
 }
 
 // View model for accessing highest payout
@@ -26,13 +28,18 @@ class HighestPayoutViewModel {
     private let delegate: HighestPayoutViewModelDelegate
     private let firestore: Firestore
     private static let collectionName = "HighestPayouts"
-    private static let fieldUserName = "user_name"
+    private static let fieldUserName = "uid"
     private static let fieldAmount = "amount"
-    private let userName: String
+    private var id: String = ""
     
-    public init(delegate: HighestPayoutViewModelDelegate, userName: String) {
+    public init(delegate: HighestPayoutViewModelDelegate) {
         self.delegate = delegate
-        self.userName = userName
+        firestore = Firestore.firestore()
+    }
+    
+    public init(delegate: HighestPayoutViewModelDelegate, id: String) {
+        self.delegate = delegate
+        self.id = id
         firestore = Firestore.firestore()
     }
     
@@ -40,7 +47,7 @@ class HighestPayoutViewModel {
     public func startListeningToHighestPayout() {
         firestore
             .collection(HighestPayoutViewModel.collectionName)
-            .document(userName)
+            .document(id)
             .addSnapshotListener { [unowned self] (snapshot, error) in
                 guard let snapshot = snapshot else {
                     print("Fail to get highest payout from firestore")
@@ -49,7 +56,6 @@ class HighestPayoutViewModel {
                 
                 let data = snapshot.data()!
                 let highestPayout = HighestPayout(
-                    userName: data[HighestPayoutViewModel.fieldUserName] as? String ?? "",
                     amount: data[HighestPayoutViewModel.fieldAmount] as? Int ?? 0)
                 delegate.onHighestPayoutUpdate(highestPayout: highestPayout)
             }
@@ -58,12 +64,30 @@ class HighestPayoutViewModel {
     // update the highest payout of the user to the firestore
     public func updateHighestPayout(highestPayout: HighestPayout) {
         var data = [String : Any]()
-        data[HighestPayoutViewModel.fieldUserName] = highestPayout.userName
         data[HighestPayoutViewModel.fieldAmount] = highestPayout.amount
         
         firestore
             .collection(HighestPayoutViewModel.collectionName)
-            .document(userName)
+            .document(id)
             .setData(data)
+    }
+    
+    // create a highest payout record of the user in the firestore
+    public func createHighestPayout() {
+        var data = [String : Any]()
+        data[HighestPayoutViewModel.fieldAmount] = 0
+        
+        firestore
+            .collection(HighestPayoutViewModel.collectionName)
+            .addDocument(data: data)
+            .addSnapshotListener { [unowned self] (snapshot, error) in
+                guard let snapshot = snapshot else {
+                    print("Fail to create highest payout from firestore")
+                    return
+                }
+                
+                id = snapshot.documentID
+                delegate.onHighestPayoutCreated(id: id)
+            }
     }
 }

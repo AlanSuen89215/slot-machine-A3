@@ -46,8 +46,12 @@ class GameViewController: UIViewController {
     private var globalJackpotViewModel: GlobalJackpotViewModel? = nil
     private var highestPayoutViewModel: HighestPayoutViewModel? = nil
     
+    private var slotMachineSetting: SlotMachineSetting!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        slotMachineSetting = SlotMachineSetting.sharedSlotMachineSetting
         
         //color
         let yellow = UIColor(red: 255/255, green: 212/255, blue: 96/255, alpha: 1.0)
@@ -102,8 +106,14 @@ class GameViewController: UIViewController {
         globalJackpotViewModel = GlobalJackpotViewModel(delegate: self)
         globalJackpotViewModel!.startListeningToGlobalJackpot()
         // Get the highest payout of the user from the firestore
-        highestPayoutViewModel = HighestPayoutViewModel(delegate: self, userName: "alan")
-        highestPayoutViewModel!.startListeningToHighestPayout()
+        if (slotMachineSetting.getHighestPayoutRecordId() != nil) {
+            highestPayoutViewModel = HighestPayoutViewModel(delegate: self, id: slotMachineSetting.getHighestPayoutRecordId()!)
+            highestPayoutViewModel!.startListeningToHighestPayout()
+        }
+        else { // create the highest payout record in the firestore
+            highestPayoutViewModel = HighestPayoutViewModel(delegate: self)
+            highestPayoutViewModel!.createHighestPayout()
+        }
     }
     
     //Add function - add 50 to current bet per clicking
@@ -174,7 +184,6 @@ class GameViewController: UIViewController {
         highestPayout = currentPayout
         highestPayoutViewModel!.updateHighestPayout(
             highestPayout: HighestPayout(
-                userName: "alan",
                 amount: highestPayout
             )
         )
@@ -358,7 +367,14 @@ extension GameViewController: GlobalJackpotViewModelDelegate {
 }
 
 extension GameViewController: HighestPayoutViewModelDelegate {
-    // deliver the update of the highest payout of the user
+    // handle the received document id of the created highest payout record
+    func onHighestPayoutCreated(id: String) {
+        // save the id of the highest payout record in the user defaults
+        slotMachineSetting.setHighestPayoutRecordId(highestPayoutRecordId: id)
+        highestPayoutViewModel!.startListeningToHighestPayout()
+    }
+    
+    // handle the update of the highest payout of the user
     func onHighestPayoutUpdate(highestPayout: HighestPayout) {
         // update the UI of the highest payout of the user
         self.highestPayout = highestPayout.amount

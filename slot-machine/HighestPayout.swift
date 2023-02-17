@@ -16,6 +16,5 @@ import Foundation
 
 // Store user's highest payout data
 struct HighestPayout {
-    var userName: String
     var amount: Int
 }

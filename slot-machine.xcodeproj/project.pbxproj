@@ -25,6 +25,7 @@
 		910A67AE299F01D200B69E7C /* HighestPayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A67AD299F01D200B69E7C /* HighestPayoutViewModel.swift */; };
 		916424C2299F789700671482 /* HelpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916424C1299F789700671482 /* HelpPageViewController.swift */; };
 		916424C6299F7FEB00671482 /* user_instructions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 916424C5299F7FEB00671482 /* user_instructions.txt */; };
+		916424C8299F98C700671482 /* SlotMachineSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916424C7299F98C700671482 /* SlotMachineSetting.swift */; };
 		91D7874C299D15160058B5AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D7874B299D15160058B5AE /* GoogleService-Info.plist */; };
 		E338658F29778407006BFF33 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338658E29778407006BFF33 /* StartPageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		910A67AD299F01D200B69E7C /* HighestPayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighestPayoutViewModel.swift; sourceTree = "<group>"; };
 		916424C1299F789700671482 /* HelpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPageViewController.swift; sourceTree = "<group>"; };
 		916424C5299F7FEB00671482 /* user_instructions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = user_instructions.txt; sourceTree = "<group>"; };
+		916424C7299F98C700671482 /* SlotMachineSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineSetting.swift; sourceTree = "<group>"; };
 		91D7874B299D15160058B5AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5D4EEBD9DE265516EA803A6 /* Pods-slot-machine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slot-machine.release.xcconfig"; path = "Target Support Files/Pods-slot-machine/Pods-slot-machine.release.xcconfig"; sourceTree = "<group>"; };
 		E338658E29778407006BFF33 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				910A67A9299EF3B100B69E7C /* GlobalJackpotViewModel.swift */,
 				910A67AB299F014A00B69E7C /* HighestPayout.swift */,
 				910A67AD299F01D200B69E7C /* HighestPayoutViewModel.swift */,
+				916424C7299F98C700671482 /* SlotMachineSetting.swift */,
 				916424C5299F7FEB00671482 /* user_instructions.txt */,
 			);
 			path = "slot-machine";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916424C8299F98C700671482 /* SlotMachineSetting.swift in Sources */,
 				916424C2299F789700671482 /* HelpPageViewController.swift in Sources */,
 				910A67AA299EF3B100B69E7C /* GlobalJackpotViewModel.swift in Sources */,
 				06A5505129775D5300EF5F57 /* GameScene.swift in Sources */,
