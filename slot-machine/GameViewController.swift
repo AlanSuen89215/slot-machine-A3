@@ -23,6 +23,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var moneyAmountLabel: UILabel!
     @IBOutlet weak var jackpotLabel: UILabel!
     @IBOutlet weak var jackpotWinMsgLabel: UILabel!
+    @IBOutlet weak var highestPayoutLabel: UILabel!
     
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var secondImage: UIImageView!
@@ -39,9 +40,11 @@ class GameViewController: UIViewController {
     private var money: Int = initialMoney
     private var bet: Int = initialBet
     private var jackpot: Int = 0
+    private var highestPayout: Int = 0
     private var numOfSymbolsInReels: [String : Int] = [:]
     
     private var globalJackpotViewModel: GlobalJackpotViewModel? = nil
+    private var highestPayoutViewModel: HighestPayoutViewModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +65,10 @@ class GameViewController: UIViewController {
         betLabel.layer.borderColor = yellow.cgColor
         betLabel.text = toThousandSeparateString(num: GameViewController.initialBet)
         
-        jackpotLabel.text = toThousandSeparateString(num: jackpot)
+        //highestPayoutLabel.layer.masksToBounds = true
+        //highestPayoutLabel.layer.cornerRadius = 10
+        //highestPayoutLabel.layer.borderWidth = 4
+        //highestPayoutLabel.layer.borderColor = yellow.cgColor
         
         //style of button
         BtnMinus.layer.masksToBounds = true
@@ -95,6 +101,9 @@ class GameViewController: UIViewController {
         // Get the global jackpot amount from the firestore
         globalJackpotViewModel = GlobalJackpotViewModel(delegate: self)
         globalJackpotViewModel!.startListeningToGlobalJackpot()
+        // Get the highest payout of the user from the firestore
+        highestPayoutViewModel = HighestPayoutViewModel(delegate: self, userName: "alan")
+        highestPayoutViewModel!.startListeningToHighestPayout()
     }
     
     //Add function - add 50 to current bet per clicking
@@ -117,7 +126,6 @@ class GameViewController: UIViewController {
         bet = GameViewController.initialBet
         moneyAmountLabel.text = toThousandSeparateString(num: GameViewController.initialMoney)
         betLabel.text = toThousandSeparateString(num: GameViewController.initialBet)
-        jackpotLabel.text = toThousandSeparateString(num: jackpot)
         BtnSpin.isEnabled = true
         BtnSpin.backgroundColor = UIColor.red
         sceneNode?.reel1?.texture = SKTexture(imageNamed: GameViewController.initialSymbol)
@@ -132,6 +140,7 @@ class GameViewController: UIViewController {
     // - check if the user win the jackpot
     // - add the won jackpot (if any) to the user money and deduct it from jackpot
     // - display a message when user win the jackpot
+    // - Update the highest payout of the user
     @IBAction func onSpinBtnTouchUpInside(_ sender: UIButton) {
         resetNumOfSymbolsInReels()
         jackpotWinMsgLabel.isHidden = true
@@ -151,8 +160,24 @@ class GameViewController: UIViewController {
             deductJackpot(amount: wonJackpotAmount)
             addMoney(amount: wonJackpotAmount)
             jackpotWinMsgLabel.isHidden = false
+            updateHighestPayout(currentPayout: wonJackpotAmount)
         }
         changeStateOfSpinButton()
+    }
+    
+    // update the highest payout of the user and save it to the firestore
+    private func updateHighestPayout(currentPayout: Int) {
+        if (currentPayout <= highestPayout) {
+            return
+        }
+        
+        highestPayout = currentPayout
+        highestPayoutViewModel!.updateHighestPayout(
+            highestPayout: HighestPayout(
+                userName: "alan",
+                amount: highestPayout
+            )
+        )
     }
     
     // enable or disable the spin button by checking if the user money is enough for bet
@@ -182,15 +207,17 @@ class GameViewController: UIViewController {
         moneyAmountLabel!.text = toThousandSeparateString(num: money)
     }
     
-    // add amount to jackpot
+    // add amount to global jackpot
     private func addJackpot(amount: Int) {
         jackpot += amount
+        globalJackpotViewModel!.updateGlobalJackpot(jackpot: Jackpot(amount: jackpot))
         jackpotLabel!.text = toThousandSeparateString(num: jackpot)
     }
     
-    // deduct amount from jackpot
+    // deduct amount from global jackpot
     private func deductJackpot(amount: Int) {
         jackpot -= amount
+        globalJackpotViewModel!.updateGlobalJackpot(jackpot: Jackpot(amount: jackpot))
         jackpotLabel!.text = toThousandSeparateString(num: jackpot)
     }
     
@@ -324,8 +351,17 @@ class GameViewController: UIViewController {
 extension GameViewController: GlobalJackpotViewModelDelegate {
     // deliver the update of the global jackpot
     func onGlobalJackpotUpdate(jackpot: Jackpot) {
-        // update the jackpot of the slot machine
+        // update the UI of the jackpot of the slot machine
         self.jackpot = jackpot.amount
         jackpotLabel.text = toThousandSeparateString(num: self.jackpot)
+    }
+}
+
+extension GameViewController: HighestPayoutViewModelDelegate {
+    // deliver the update of the highest payout of the user
+    func onHighestPayoutUpdate(highestPayout: HighestPayout) {
+        // update the UI of the highest payout of the user
+        self.highestPayout = highestPayout.amount
+        highestPayoutLabel.text = toThousandSeparateString(num: self.highestPayout)
     }
 }
