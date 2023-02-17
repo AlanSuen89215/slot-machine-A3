@@ -16,7 +16,17 @@ import UIKit
 
 class HelpPageViewController: UIViewController {
 
+    @IBOutlet weak var userInstructionsTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+            let userInstructionsFile: URL! = Bundle.main.url(forResource: "user_instructions", withExtension: "txt")
+            let userInstructions = try String(contentsOf: userInstructionsFile)
+            userInstructionsTextView.text = userInstructions
+        }
+        catch {
+            print("Fail to load help docs!")
+        }
     }
 }
