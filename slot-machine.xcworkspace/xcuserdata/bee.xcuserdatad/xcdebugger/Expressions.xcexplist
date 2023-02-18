@@ -18,5 +18,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "HelpPageViewController.tableView(_:numberOfRowsInSection:):HelpPageViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "winningCombinations.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
