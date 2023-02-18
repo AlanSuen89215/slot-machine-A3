@@ -15,6 +15,8 @@
 import Foundation
 
 // Store information of winning combination
-class WinningCombination {
-    
+struct WinningCombination {
+    public let symbolImageName: String
+    public let numOfSymbol: Int
+    public let payoutRatio: Int
 }

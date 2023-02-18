@@ -54,5 +54,33 @@ class HelpPageViewController:
         return cell
     }
     
+    // add the winning combinations into the list
+    private func initWinningCombinations() {
+        winningCombinations.append(WinningCombination(symbolImageName: "9", numOfSymbol: 3, payoutRatio: 100))
+        winningCombinations.append(WinningCombination(symbolImageName: "8", numOfSymbol: 3, payoutRatio: 75))
+        winningCombinations.append(WinningCombination(symbolImageName: "7", numOfSymbol: 3, payoutRatio: 50))
+        winningCombinations.append(WinningCombination(symbolImageName: "6", numOfSymbol: 3, payoutRatio: 40))
+        winningCombinations.append(WinningCombination(symbolImageName: "5", numOfSymbol: 3, payoutRatio: 30))
+        winningCombinations.append(WinningCombination(symbolImageName: "4", numOfSymbol: 3, payoutRatio: 20))
+        winningCombinations.append(WinningCombination(symbolImageName: "3", numOfSymbol: 3, payoutRatio: 10))
+        winningCombinations.append(WinningCombination(symbolImageName: "2", numOfSymbol: 3, payoutRatio: 5))
+        winningCombinations.append(WinningCombination(symbolImageName: "9", numOfSymbol: 2, payoutRatio: 20))
+        winningCombinations.append(WinningCombination(symbolImageName: "8", numOfSymbol: 2, payoutRatio: 10))
+        winningCombinations.append(WinningCombination(symbolImageName: "7", numOfSymbol: 2, payoutRatio: 5))
+        winningCombinations.append(WinningCombination(symbolImageName: "6", numOfSymbol: 2, payoutRatio: 4))
+        winningCombinations.append(WinningCombination(symbolImageName: "5", numOfSymbol: 2, payoutRatio: 3))
+        winningCombinations.append(WinningCombination(symbolImageName: "4", numOfSymbol: 2, payoutRatio: 2))
+        winningCombinations.append(WinningCombination(symbolImageName: "3", numOfSymbol: 2, payoutRatio: 2))
+        winningCombinations.append(WinningCombination(symbolImageName: "2", numOfSymbol: 2, payoutRatio: 2))
+        winningCombinations.append(WinningCombination(symbolImageName: "9", numOfSymbol: 1, payoutRatio: 5))
+        winningCombinations.append(WinningCombination(symbolImageName: "8", numOfSymbol: 1, payoutRatio: 1))
+        winningCombinations.append(WinningCombination(symbolImageName: "7", numOfSymbol: 1, payoutRatio: 1))
+        winningCombinations.append(WinningCombination(symbolImageName: "6", numOfSymbol: 1, payoutRatio: 1))
+        winningCombinations.append(WinningCombination(symbolImageName: "5", numOfSymbol: 1, payoutRatio: 1))
+        winningCombinations.append(WinningCombination(symbolImageName: "4", numOfSymbol: 1, payoutRatio: 1))
+        winningCombinations.append(WinningCombination(symbolImageName: "3", numOfSymbol: 1, payoutRatio: 1))
+        winningCombinations.append(WinningCombination(symbolImageName: "2", numOfSymbol: 1, payoutRatio: 1))
+    }
+    
 }
 
