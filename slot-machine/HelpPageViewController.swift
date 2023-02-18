@@ -51,6 +51,7 @@ class HelpPageViewController:
             winningCombination: winningCombinations[indexPath.row],
             row: indexPath.row
         )
+        
         return cell
     }
     

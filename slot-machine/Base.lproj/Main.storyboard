@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h6Y-X7-z5I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h6Y-X7-z5I">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -93,7 +94,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eG-s1-t6s">
-                                <rect key="frame" x="149" y="100" width="93" height="46"/>
+                                <rect key="frame" x="281" y="100" width="93" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="RESET">
@@ -105,7 +106,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajT-bV-Zyc">
-                                <rect key="frame" x="16" y="173" width="164" height="49"/>
+                                <rect key="frame" x="16" y="176" width="164" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.054901964960000001" green="0.054901964960000001" blue="0.054901964960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.054901964960000001" green="0.054901964960000001" blue="0.054901964960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -133,7 +134,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dollarsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-xe-kWL">
-                                <rect key="frame" x="16" y="182" width="35" height="35"/>
+                                <rect key="frame" x="20" y="184" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.86274516580000005" green="0.70588237050000002" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
@@ -181,7 +182,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-Wg-czN">
-                                <rect key="frame" x="66" y="189" width="105" height="21"/>
+                                <rect key="frame" x="66" y="191" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,12 +231,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4j-NT-BcU">
-                                <rect key="frame" x="281" y="100" width="93" height="46"/>
+                                <rect key="frame" x="175" y="100" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="HELP">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
-                                    <color key="baseBackgroundColor" red="0.94117647410000005" green="0.48235297199999999" blue="0.2470588088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <imageReference key="image" image="exclamationmark.transmission" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="ResetFunction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="VkV-0O-ILQ"/>
@@ -243,7 +245,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MONEY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkA-dA-uze">
-                                <rect key="frame" x="91" y="154" width="80" height="27"/>
+                                <rect key="frame" x="16" y="154" width="80" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVc-lN-YIK">
+                                <rect key="frame" x="188" y="191" width="186" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,13 +260,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIGHEST PAYOUT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlN-mG-jH8">
                                 <rect key="frame" x="188" y="154" width="186" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVc-lN-YIK">
-                                <rect key="frame" x="188" y="189" width="186" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,30 +291,11 @@
             <objects>
                 <viewController id="eIm-fs-MXj" customClass="HelpPageViewController" customModule="Slot_Machine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RWG-Ep-g0l">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBo-aM-qrD">
-                                <rect key="frame" x="16" y="44" width="94" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="PYn-ab-BUR"/>
-                                    <constraint firstAttribute="height" constant="46" id="SOc-DN-UfX"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="BACK">
-                                            <attributes>
-                                                <font key="NSFont" size="20" name="Helvetica-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="1" green="0.44705882349999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0Q-gl-Beb">
-                                <rect key="frame" x="16" y="130" width="358" height="280"/>
+                                <rect key="frame" x="16" y="126" width="358" height="280"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="tUF-2s-6l5"/>
@@ -322,18 +305,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Instructions:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-lE-xea">
-                                <rect key="frame" x="16" y="98" width="169" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="169" id="1BI-Ah-dzq"/>
-                                    <constraint firstAttribute="height" constant="24" id="Fi9-Hs-FX9"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Instructions:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-lE-xea">
+                                <rect key="frame" x="16" y="47" width="169" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winning Combinations:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3K-5H-ukk">
-                                <rect key="frame" x="16" y="418" width="219" height="24"/>
+                                <rect key="frame" x="16" y="414" width="219" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="A7y-zU-9GM"/>
                                     <constraint firstAttribute="width" constant="219" id="HTE-o8-TKC"/>
@@ -343,7 +322,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sZi-bk-CBt">
-                                <rect key="frame" x="16" y="450" width="358" height="306"/>
+                                <rect key="frame" x="16" y="446" width="358" height="307"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="eIm-fs-MXj" id="GO2-qs-gwh"/>
@@ -355,15 +334,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="k23-26-VC3" firstAttribute="trailing" secondItem="sZi-bk-CBt" secondAttribute="trailing" constant="16" id="0BW-68-fXz"/>
-                            <constraint firstItem="aBo-aM-qrD" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="6GG-Vf-Yad"/>
+                            <constraint firstItem="p6L-lE-xea" firstAttribute="leading" secondItem="r0Q-gl-Beb" secondAttribute="leading" id="IaM-3r-Iu2"/>
                             <constraint firstItem="G3K-5H-ukk" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="Ka4-Bf-cHp"/>
+                            <constraint firstItem="r0Q-gl-Beb" firstAttribute="top" secondItem="p6L-lE-xea" secondAttribute="bottom" constant="8" symbolic="YES" id="LHL-tp-pPH"/>
                             <constraint firstItem="G3K-5H-ukk" firstAttribute="top" secondItem="r0Q-gl-Beb" secondAttribute="bottom" constant="8" symbolic="YES" id="Vw5-ui-Snm"/>
+                            <constraint firstItem="p6L-lE-xea" firstAttribute="top" secondItem="k23-26-VC3" secondAttribute="top" constant="47" id="XFg-A7-XgS"/>
                             <constraint firstItem="k23-26-VC3" firstAttribute="bottom" secondItem="sZi-bk-CBt" secondAttribute="bottom" constant="34" id="Yl1-Ll-k2H"/>
                             <constraint firstItem="r0Q-gl-Beb" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="Z6i-ct-fMO"/>
-                            <constraint firstItem="aBo-aM-qrD" firstAttribute="top" secondItem="k23-26-VC3" secondAttribute="top" id="Zmh-pH-P10"/>
-                            <constraint firstItem="p6L-lE-xea" firstAttribute="top" secondItem="aBo-aM-qrD" secondAttribute="bottom" constant="8" symbolic="YES" id="aen-v1-wKh"/>
-                            <constraint firstItem="r0Q-gl-Beb" firstAttribute="top" secondItem="p6L-lE-xea" secondAttribute="bottom" constant="8" symbolic="YES" id="c55-tp-xfR"/>
-                            <constraint firstItem="p6L-lE-xea" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="nOh-N3-xKN"/>
                             <constraint firstItem="sZi-bk-CBt" firstAttribute="leading" secondItem="k23-26-VC3" secondAttribute="leading" constant="16" id="yjg-TN-loo"/>
                             <constraint firstItem="sZi-bk-CBt" firstAttribute="top" secondItem="G3K-5H-ukk" secondAttribute="bottom" constant="8" symbolic="YES" id="zdc-c9-u34"/>
                         </constraints>
@@ -379,13 +356,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="exclamationmark.transmission" catalog="system" width="128" height="122"/>
         <image name="istockphoto-926231068-612x612" width="612" height="510"/>
-        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="slot-frame" width="545" height="390"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
