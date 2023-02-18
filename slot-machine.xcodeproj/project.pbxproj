@@ -31,7 +31,6 @@
 		91D2596F29A0425900293AB7 /* WinningCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2596E29A0425900293AB7 /* WinningCombination.swift */; };
 		91D7874C299D15160058B5AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D7874B299D15160058B5AE /* GoogleService-Info.plist */; };
 		E338658F29778407006BFF33 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338658E29778407006BFF33 /* StartPageViewController.swift */; };
-		E3C04FFE29A053BD008E95C1 /* SettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C04FFD29A053BD008E95C1 /* SettingPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +61,6 @@
 		91D7874B299D15160058B5AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5D4EEBD9DE265516EA803A6 /* Pods-slot-machine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slot-machine.release.xcconfig"; path = "Target Support Files/Pods-slot-machine/Pods-slot-machine.release.xcconfig"; sourceTree = "<group>"; };
 		E338658E29778407006BFF33 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
-		E3C04FFD29A053BD008E95C1 /* SettingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 				E338658E29778407006BFF33 /* StartPageViewController.swift */,
 				06A5505229775D5300EF5F57 /* GameViewController.swift */,
 				916424C1299F789700671482 /* HelpPageViewController.swift */,
-				E3C04FFD29A053BD008E95C1 /* SettingPageViewController.swift */,
 				06A5505429775D5300EF5F57 /* Main.storyboard */,
 				91D7874B299D15160058B5AE /* GoogleService-Info.plist */,
 				06A5505729775D5400EF5F57 /* Assets.xcassets */,
@@ -283,7 +280,6 @@
 				916424C2299F789700671482 /* HelpPageViewController.swift in Sources */,
 				910A67AA299EF3B100B69E7C /* GlobalJackpotViewModel.swift in Sources */,
 				06A5505129775D5300EF5F57 /* GameScene.swift in Sources */,
-				E3C04FFE29A053BD008E95C1 /* SettingPageViewController.swift in Sources */,
 				910A67A8299EF28000B69E7C /* Jackpot.swift in Sources */,
 				910A67AC299F014A00B69E7C /* HighestPayout.swift in Sources */,
 				91D2596C29A0420000293AB7 /* WinningCombinationsTableViewCell.swift in Sources */,
