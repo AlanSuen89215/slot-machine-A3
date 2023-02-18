@@ -348,6 +348,7 @@
                     <navigationItem key="navigationItem" id="PXs-le-X2f"/>
                     <connections>
                         <outlet property="userInstructionsTextView" destination="r0Q-gl-Beb" id="QMz-tR-OT0"/>
+                        <outlet property="winningCombinationsTableView" destination="sZi-bk-CBt" id="ak5-RD-dmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5V-ZO-hf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
