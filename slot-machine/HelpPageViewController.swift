@@ -1,7 +1,7 @@
 //
 //  MAPD724 W2023
 //  Group 9
-//  Assignment 2
+//  Assignment 3
 //  App description: slot machine
 //  Author: Po Lam Wong, Lizolet (301258847)
 //          Chi Hung Sum, Samuel (300858503)
@@ -22,17 +22,41 @@ class HelpPageViewController:
 
     @IBOutlet weak var userInstructionsTextView: UITextView!
     @IBOutlet weak var winningCombinationsTableView: UITableView!
+    @IBOutlet weak var backgroundView: UIView!
     
     private var winningCombinations = [WinningCombination]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Create a gradient layer.
+                let gradientLayer = CAGradientLayer()
+                gradientLayer.frame = view.bounds
+                gradientLayer.colors = [#colorLiteral(red: 0.1705927849, green: 0.2532435358, blue: 0.3451030254, alpha: 1).cgColor, #colorLiteral(red: 0.9186434746, green: 0.3272016048, blue: 0.3362314999, alpha: 1).cgColor, #colorLiteral(red: 0.1759031415, green: 0.2531238198, blue: 0.3492524326, alpha: 1).cgColor]
+                gradientLayer.shouldRasterize = true
+                backgroundView.layer.addSublayer(gradientLayer)
+        
+        //style for tableview cell
+        winningCombinationsTableView.rowHeight = 70.0
+        winningCombinationsTableView.layer.borderWidth = 4
+        winningCombinationsTableView.layer.borderColor = UIColor.white.cgColor
+        
+        //color
+        let blue = UIColor(red: 45/255, green: 64/255, blue: 89/255, alpha: 1.0)
+        let red = UIColor(red: 234/255, green: 84/255, blue: 85/255, alpha: 0.8)
+        
+        
         do {
             // load the content of the user instructions from resource
             let userInstructionsFile: URL! = Bundle.main.url(forResource: "user_instructions", withExtension: "txt")
             let userInstructions = try String(contentsOf: userInstructionsFile)
             userInstructionsTextView.text = userInstructions
+            userInstructionsTextView.textColor = blue
+            userInstructionsTextView.backgroundColor = UIColor.systemGray5
+            userInstructionsTextView.layer.borderWidth = 4
+            userInstructionsTextView.layer.borderColor = UIColor.white.cgColor
+            
+            
             
             // configure the winning combinations table view
             initWinningCombinations()

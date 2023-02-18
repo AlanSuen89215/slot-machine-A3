@@ -1,7 +1,10 @@
-1. Touch the "+" button to increase your bet or touch the "-" button to decrease your bet.
-2. If you do not have enough money for the bet, the Spin button would be disable and change to grey. You need to decrease your bet so that you have enough money to play.
-3. Touch the Spin button to play the game. Bet is deducted from your money for the spinning.
-4. A winning message will be displayed and the payout will be added to your money if you meet the one of the winning combinations
-5. Your bet for each spinning is added to the Global Jackpot shared among all the players.
-6. The payout for winning is given from the Global Jackpot. If your won payout is more than the amount of the Global Jackpot, you are given the current amount of the Global Jackpot in maximum.
-7. Touch the Reset button to reset your money and bet to their initial value.
+"+" button: Increase your bet.
+"-" button : Decrease your bet.
+Global Jackpot: Pool from all players when placing bets.
+Reset button: Reset everything, including the bet and your money, except Global Jackpot.
+Spin button: Spin and try your luck!
+(Note: You cannot spin if you bet too much. Try decrease your bet.)
+
+If you win, you will see a winning message.
+You will receive a payout from the Global Jackpot according to the following combination.
+(Note: You cannot receive any amount more than that in the current Global Jackpot.)
