@@ -28,7 +28,6 @@ class HighestPayoutViewModel {
     private let delegate: HighestPayoutViewModelDelegate
     private let firestore: Firestore
     private static let collectionName = "HighestPayouts"
-    private static let fieldUserName = "uid"
     private static let fieldAmount = "amount"
     private var id: String = ""
     

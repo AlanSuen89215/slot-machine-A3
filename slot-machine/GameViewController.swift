@@ -7,7 +7,7 @@
 //          Chi Hung Sum, Samuel (300858503)
 //          Chun Fun Suen, Alan (301277969)
 
-//  StartPafgeViewController.swift
+//  GameViewController.swift
 //  Date: Feb 16, 2023
 //  Version: 3.0
 //
