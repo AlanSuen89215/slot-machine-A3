@@ -16,7 +16,9 @@ import UIKit
 
 // The table view cell to display winning combination
 class WinningCombinationsTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var symbolImageView: UIImageView!
+    @IBOutlet weak var payoutRatioLabel: UILabel!
+    
     public static let identifier = "WinningCombinationsTableViewCell"
     
     static func nib() -> UINib {
@@ -36,6 +38,18 @@ class WinningCombinationsTableViewCell: UITableViewCell {
     
     // configure the content of UIs of the cell
     func configure(winningCombination: WinningCombination, row: Int) {
-        
+        symbolImageView.image = UIImage(named: winningCombination.symbolImageName)
+        if (winningCombination.numOfSymbol == 0) {
+            // handle UI for LOSING case
+            payoutRatioLabel.text = "Any number = LOSE"
+        }
+        else {
+            // handle UI for WINNING case
+            payoutRatioLabel.text =
+                "x " +
+                String(winningCombination.numOfSymbol) +
+                ", Payout = Bet x " +
+                String(winningCombination.payoutRatio)
+        }
     }
 }

@@ -21,17 +21,22 @@ class HelpPageViewController:
 {
 
     @IBOutlet weak var userInstructionsTextView: UITextView!
+    @IBOutlet weak var winningCombinationsTableView: UITableView!
     
-    private let winningCombinationsTableIdentifier = "WinningCombinationTable"
     private var winningCombinations = [WinningCombination]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         do {
+            // load the content of the user instructions from resource
             let userInstructionsFile: URL! = Bundle.main.url(forResource: "user_instructions", withExtension: "txt")
             let userInstructions = try String(contentsOf: userInstructionsFile)
             userInstructionsTextView.text = userInstructions
+            
+            // configure the winning combinations table view
+            initWinningCombinations()
+            winningCombinationsTableView.register(WinningCombinationsTableViewCell.nib(), forCellReuseIdentifier: WinningCombinationsTableViewCell.identifier)
         }
         catch {
             print("Fail to load help docs!")
@@ -43,6 +48,7 @@ class HelpPageViewController:
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // configure the UI of the table view cell of a winning combination
         let cell = tableView.dequeueReusableCell(
             withIdentifier: WinningCombinationsTableViewCell.identifier,
             for: indexPath
@@ -57,6 +63,7 @@ class HelpPageViewController:
     
     // add the winning combinations into the list
     private func initWinningCombinations() {
+        winningCombinations.append(WinningCombination(symbolImageName: "1", numOfSymbol: 0, payoutRatio: 0))
         winningCombinations.append(WinningCombination(symbolImageName: "9", numOfSymbol: 3, payoutRatio: 100))
         winningCombinations.append(WinningCombination(symbolImageName: "8", numOfSymbol: 3, payoutRatio: 75))
         winningCombinations.append(WinningCombination(symbolImageName: "7", numOfSymbol: 3, payoutRatio: 50))

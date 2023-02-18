@@ -69,11 +69,6 @@ class GameViewController: UIViewController {
         betLabel.layer.borderColor = yellow.cgColor
         betLabel.text = toThousandSeparateString(num: GameViewController.initialBet)
         
-        //highestPayoutLabel.layer.masksToBounds = true
-        //highestPayoutLabel.layer.cornerRadius = 10
-        //highestPayoutLabel.layer.borderWidth = 4
-        //highestPayoutLabel.layer.borderColor = yellow.cgColor
-        
         //style of button
         BtnMinus.layer.masksToBounds = true
         BtnMinus.layer.cornerRadius = 20
