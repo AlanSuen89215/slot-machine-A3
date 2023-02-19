@@ -29,14 +29,14 @@ class HelpPageViewController:
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create a gradient layer.
+        // Create a gradient layer for the background
                 let gradientLayer = CAGradientLayer()
                 gradientLayer.frame = view.bounds
                 gradientLayer.colors = [#colorLiteral(red: 0.1705927849, green: 0.2532435358, blue: 0.3451030254, alpha: 1).cgColor, #colorLiteral(red: 0.9186434746, green: 0.3272016048, blue: 0.3362314999, alpha: 1).cgColor, #colorLiteral(red: 0.1759031415, green: 0.2531238198, blue: 0.3492524326, alpha: 1).cgColor]
                 gradientLayer.shouldRasterize = true
                 backgroundView.layer.addSublayer(gradientLayer)
         
-        //style for tableview cell
+        //style of tableview cell
         winningCombinationsTableView.rowHeight = 70.0
         winningCombinationsTableView.layer.borderWidth = 4
         winningCombinationsTableView.layer.borderColor = UIColor.white.cgColor
@@ -51,6 +51,8 @@ class HelpPageViewController:
             let userInstructionsFile: URL! = Bundle.main.url(forResource: "user_instructions", withExtension: "txt")
             let userInstructions = try String(contentsOf: userInstructionsFile)
             userInstructionsTextView.text = userInstructions
+            
+            //style user instruction textview
             userInstructionsTextView.textColor = blue
             userInstructionsTextView.backgroundColor = UIColor.systemGray5
             userInstructionsTextView.layer.borderWidth = 4
